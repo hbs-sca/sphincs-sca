@@ -387,12 +387,10 @@ static void hash_attack(uint16_t count, uint16_t del_ms)
 
 	for (i = 0; i < count; ++i)
 	{
-		/* Clears the SUBTREE_HEIGHT least significant bits */
-		addr[7] = (addr[7] & SUBTREE_MASK);
-
 		for (j = 0; j < (1 << SUBTREE_HEIGHT); ++j)
 		{
-			addr[7] = j;
+			/* Clears the SUBTREE_HEIGHT least significant bits */
+			addr[7] = (addr[7] & SUBTREE_MASK) | j;
 
 			crypto_hash_blake256(seed, buffer, SEED_BYTES + ADDR_BYTES);
 
