@@ -2,7 +2,7 @@
 
 We propose and implement a DPA on a BLAKE-256-based PRF. We evaluated our attack using physically measured power consumption traces of a SAM3X8E ARM Cortex-M3 executing the code in [blake256.c](blake256.c)
 
-We are currently referring to this code in a paper in submission to a venue that requires anonymous submissions. This is why we also keep this anonymous.
+This work was accepted to COSADE 2018: Matthias J. Kannwischer, Aymeric Genêt, Denis Butin, Juliane Krämer, and Johannes Buchmann, "Differential Power Analysis of XMSS and SPHINCS", COSADE 2018, Singapore (to appear)
 
 ## Program description
 
